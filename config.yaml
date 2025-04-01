@@ -1,0 +1,21 @@
+name: finance-reports-mcp
+version: 1.0.0
+description: Finance Reports MCP Service
+
+services:
+  - name: finance-reports
+    port: 8080
+    routes:
+      - path: /api/companies
+        method: GET
+        handler: get_companies
+      - path: /api/reports
+        method: GET
+        handler: get_reports
+      - path: /api/report-data
+        method: GET
+        handler: get_report_data
+
+settings:
+  base_url: "http://97.74.94.7:3202"  # 需要替换为实际的API基础URL
+  timeout: 30 
