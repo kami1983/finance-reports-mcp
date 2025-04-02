@@ -1,0 +1,47 @@
+{
+    "name": "finance-reports",
+    "version": "1.0.0",
+    "description": "财务报表数据服务",
+    "endpoints": {
+        "get_companies": {
+            "path": "/get_report_company_list",
+            "method": "GET",
+            "description": "获取所有可用的公司列表",
+            "parameters": {}
+        },
+        "get_reports": {
+            "path": "/get_report_name_list",
+            "method": "GET",
+            "description": "获取指定公司的报表名称列表",
+            "parameters": {
+                "company": {
+                    "type": "string",
+                    "description": "公司名称",
+                    "required": true
+                }
+            }
+        },
+        "get_report_data": {
+            "path": "/get_report_data_list",
+            "method": "GET",
+            "description": "获取指定公司和报表的具体数据",
+            "parameters": {
+                "company": {
+                    "type": "string",
+                    "description": "公司名称",
+                    "required": true
+                },
+                "name": {
+                    "type": "string",
+                    "description": "报表名称",
+                    "required": true
+                }
+            }
+        }
+    },
+    "settings": {
+        "host": "localhost",
+        "port": 8080,
+        "timeout": 30
+    }
+} 
