@@ -4,13 +4,13 @@
     "description": "财务报表数据服务",
     "endpoints": {
         "get_companies": {
-            "path": "/get_report_company_list",
+            "path": "/api/get_report_company_list",
             "method": "GET",
             "description": "获取所有可用的公司列表",
             "parameters": {}
         },
         "get_reports": {
-            "path": "/get_report_name_list",
+            "path": "/api/get_report_name_list",
             "method": "GET",
             "description": "获取指定公司的报表名称列表",
             "parameters": {
@@ -22,7 +22,7 @@
             }
         },
         "get_report_data": {
-            "path": "/get_report_data_list",
+            "path": "/api/get_report_data_list",
             "method": "GET",
             "description": "获取指定公司和报表的具体数据",
             "parameters": {
@@ -42,6 +42,7 @@
     "settings": {
         "host": "localhost",
         "port": 8080,
-        "timeout": 30
+        "timeout": 30,
+        "api_base_url": "http://97.74.94.7:3202"
     }
 } 
